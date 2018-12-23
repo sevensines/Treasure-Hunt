@@ -1,1 +1,157 @@
-/* No CSS *//*# sourceMappingURL=question-cards.css.map */
+.progress-bar {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.progress-bar > .prog-start {
+  width: 50px;
+  height: 50px;
+  background: url("../images/tent.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.progress-bar > .prog-marker {
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar > .prog-marker > .marker {
+  width: 0;
+  height: 4px;
+  background: #347cb1;
+  border-radius: 5px;
+  -webkit-transition: width 600ms ease-out;
+  transition: width 600ms ease-out;
+}
+
+.progress-bar > .prog-end {
+  width: 50px;
+  height: 50px;
+  background: url("../images/target.svg") no-repeat center center;
+  background-size: contain;
+}
+
+#question-wrapper,
+#answer-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#question-wrapper > .card-wrapper,
+#answer-wrapper > .card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#question-wrapper > .card-wrapper > .card,
+#question-wrapper > .card-wrapper .final-card,
+#answer-wrapper > .card-wrapper > .card,
+#answer-wrapper > .card-wrapper .final-card {
+  position: absolute;
+  width: 99%;
+  height: 320px;
+  margin: 10px auto;
+  padding: 20px;
+  font-size: 2em;
+  line-height: 1.1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffffff url("../images/compass-card.svg") no-repeat center center;
+  background-size: contain;
+}
+
+#question-wrapper > .card-wrapper > .card img,
+#question-wrapper > .card-wrapper .final-card img,
+#answer-wrapper > .card-wrapper > .card img,
+#answer-wrapper > .card-wrapper .final-card img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+#question-wrapper > .card-wrapper .final-card,
+#answer-wrapper > .card-wrapper .final-card {
+  background: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#question-wrapper > .control-wrapper,
+#answer-wrapper > .control-wrapper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#question-wrapper > .control-wrapper > .cta-btn,
+#answer-wrapper > .control-wrapper > .cta-btn {
+  margin: 10px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=question-cards.css.map */

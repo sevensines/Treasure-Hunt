@@ -95,7 +95,7 @@ section {
   max-width: 480px;
   height: auto;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -229,6 +229,7 @@ section {
   background: #ffffff;
   border: 0;
   border-bottom: 1px solid #ccc;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -434,6 +435,19 @@ section {
       align-content: center;
 }
 
+.row._banner {
+  height: 65px;
+  color: #efeee2;
+  background: url("../images/tile-blue.jpg");
+}
+
+.row._banner h3 {
+  margin: 0;
+  padding: 18px;
+  font-size: 1.6em;
+  line-height: 1.1;
+}
+
 .block-grid ul {
   margin: 0;
   padding: 0;
@@ -466,14 +480,14 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
@@ -495,45 +509,6 @@ section {
 
 .block-grid ul li:nth-child(even) {
   border-left: 1px solid #ccc;
-}
-
-.cta-btn {
-  width: calc(100% - 40px);
-  background-color: #347cb1;
-  color: #ffffff;
-  font-size: 18px;
-  border: 0;
-  padding: 10px 15px;
-  margin-top: 20px;
-  text-decoration: none;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-.cta-btn._hollow {
-  background-color: transparent;
-  border: 2px solid #347cb1;
-}
-
-.cta-btn._white {
-  color: #222222;
-  background-color: #ffffff;
-  border: 1px solid #222222;
-}
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-.row._banner {
-  height: 65px;
-  color: #efeee2;
-  background: url("../images/tile-blue.jpg");
-}
-
-.row._banner h3 {
-  margin: 0;
-  padding: 18px;
-  font-size: 1.6em;
-  line-height: 1.1;
 }
 
 .progress-bar {
@@ -693,12 +668,43 @@ section {
   border-radius: 5px;
 }
 
+.cta-btn {
+  width: calc(100% - 40px);
+  background-color: #347cb1;
+  color: #ffffff;
+  font-size: 18px;
+  border: 0;
+  padding: 10px 15px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.cta-btn._hollow {
+  background-color: transparent;
+  border: 2px solid #347cb1;
+}
+
+.cta-btn._white {
+  color: #222222;
+  background-color: #ffffff;
+  border: 1px solid #222222;
+}
+
+.pad-lr-20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 /* ==========================================================================
    Fonts
    ========================================================================== */
 @font-face {
-  font-family: Scala;
-  src: url(../fonts/scalaweb.woff) format("woff"), url(../fonts/scalaweb.ttf) format("truetype");
+  font-family: CustomFont;
+  src: url("") format("woff"), url("") format("truetype");
 }
 
 /* ==========================================================================
