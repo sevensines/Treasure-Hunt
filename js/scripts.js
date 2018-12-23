@@ -97,7 +97,12 @@ $(function() {
         $("#discovery-home").attr("class", "hidden");
         next();
       });
+    let catName = $(this)
+      .find("p")
+      .text();
     $("#item-discovery").attr("class", "moveFromBottom");
+    $(".category-name").html(catName);
+    console.log(questionPosition);
   });
 
   //END DISCOVERY
@@ -106,10 +111,23 @@ $(function() {
       .attr("class", "moveToRight")
       .delay(650)
       .queue(function(next) {
+        $(".card")
+          .attr("class", "card hidden")
+          .first()
+          .attr("class", "card _top");
+        $("#question-view").attr("class", "row");
+        $("#answer-view").attr("class", "row hidden");
         $("#item-discovery").attr("class", "hidden");
         next();
       });
     $("#discovery-home").attr("class", "moveFromLeft");
+
+    //RESET PROGRESS
+    questionCount = $(".card").length;
+    stepPercent = 100 / questionCount;
+    $(".marker").css("width", stepPercent + "%");
+    progPercent = stepPercent;
+    questionPosition = 1;
   });
 
   //BUILD PROGRESS BAR
@@ -147,7 +165,6 @@ $(function() {
         .attr("class", "card moveFromBottom _top");
       $(".marker").css({ width: (progPercent += stepPercent) + "%" });
       questionPosition++;
-      console.log(questionPosition);
     }
   });
 });
