@@ -1,0 +1,32 @@
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  @include flex-column-center;
+
+  input[type="text"] {
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 15px 20px;
+    font-size: 18px;
+    background: #ffffff;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}

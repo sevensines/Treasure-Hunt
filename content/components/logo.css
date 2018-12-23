@@ -1,0 +1,96 @@
+.compass-logo {
+  position: relative;
+  width: calc(100%);
+}
+
+.compass-logo > .compass-body {
+  position: absolute;
+  width: calc(100%);
+  height: calc(100%);
+  background: url("../images/compass-body.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.compass-logo > .compass-face {
+  position: absolute;
+  bottom: 7%;
+  left: 11.5%;
+  width: 77%;
+  height: 77%;
+  background: url("../images/compass-face.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.compass-logo > .compass-dial {
+  position: absolute;
+  top: 29%;
+  left: 25%;
+  width: 52%;
+  height: 52%;
+  background: url("../images/compass-dial.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.compass-logo > .compass-title {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 17%;
+  background: #222222 url("../images/title.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.compass-logo > .animate {
+  -webkit-animation: dial 6s linear infinite;
+  animation: dial 6s linear infinite;
+}
+
+.compass-logo > .animate._reverse {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes dial {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-210deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes dial {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+/*# sourceMappingURL=logo.css.map */

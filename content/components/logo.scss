@@ -1,0 +1,107 @@
+.compass-logo {
+  position: relative;
+  width: calc(100%);
+
+  > .compass-body {
+    position: absolute;
+    width: calc(100%);
+    height: calc(100%);
+    background: url("../images/compass-body.svg") no-repeat center center;
+    background-size: contain;
+  }
+  > .compass-face {
+    position: absolute;
+    bottom: 7%;
+    left: 11.5%;
+    width: 77%;
+    height: 77%;
+    background: url("../images/compass-face.svg") no-repeat center center;
+    background-size: contain;
+  }
+  > .compass-dial {
+    position: absolute;
+    top: 29%;
+    left: 25%;
+    width: 52%;
+    height: 52%;
+    background: url("../images/compass-dial.svg") no-repeat center center;
+    background-size: contain;
+  }
+  > .compass-title {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 17%;
+    background: #222222 url("../images/title.svg") no-repeat center center;
+    background-size: contain;
+  }
+  > .animate {
+    -webkit-animation: dial 6s linear infinite;
+    -moz-animation: dial 6s linear infinite;
+    animation: dial 6s linear infinite;
+  }
+  > .animate._reverse {
+    -moz-animation-direction: reverse;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+  }
+}
+
+@-moz-keyframes dial {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  25% {
+    -moz-transform: rotate(-20deg);
+  }
+  50% {
+    -moz-transform: rotate(0deg);
+  }
+  75% {
+    -moz-transform: rotate(20deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes dial {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-210deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@keyframes dial {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}

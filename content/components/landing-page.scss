@@ -1,0 +1,31 @@
+$logoRatio: 200px;
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#landing {
+  @include flex-column-center;
+
+  .logo-wrapper {
+    @include flex-row-center;
+    background: url("../images/woods-dk.svg") center center no-repeat;
+    background-size: contain;
+
+    > .compass-logo {
+      max-width: $logoRatio;
+      height: $logoRatio;
+    }
+  }
+}

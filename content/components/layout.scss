@@ -1,0 +1,145 @@
+@mixin full-auto {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* HERO */
+.row._hero {
+  color: #efeee2;
+  background: url("../images/tile-black.jpg");
+}
+
+.hero {
+  min-height: 200px;
+  text-align: center;
+  padding: 20px;
+  @include flex-column-center;
+
+  &._woods {
+    background: url("../images/woods.svg") center center no-repeat;
+    background-size: contain;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    line-height: 1.1;
+  }
+}
+
+/* NAVIGATION */
+.settings-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url("../images/settings.svg") center center no-repeat;
+  background-size: contain;
+}
+
+.close-toggle {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../images/close.svg") center center no-repeat;
+  background-size: contain;
+}
+
+.back-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  background: url("../images/back.svg") center center no-repeat;
+  background-size: contain;
+
+  &._light {
+    background: url("../images/back_lt.svg") center center no-repeat;
+    background-size: contain;
+  }
+}
+
+/* COMPONENTS */
+#create-account {
+  @include flex-column-center;
+}
+
+.login-create-wrapper {
+  @include full-auto;
+  @include flex-column-center;
+
+  > .login-comp {
+    @include full-auto;
+    @include flex-column-center;
+  }
+  > .create-comp {
+    @include full-auto;
+    @include flex-column-center;
+  }
+}
+
+.block-grid {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: flex-start;
+
+    li {
+      width: calc(50% - 2px);
+      height: 200px;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        max-width: 120px;
+        height: 120px;
+      }
+
+      p {
+        margin: 0 auto;
+        padding: 10px 0 0 0;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+      }
+
+      &:nth-child(even) {
+        border-left: 1px solid #ccc;
+      }
+    }
+  }
+}

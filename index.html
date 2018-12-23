@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treasure Hunt</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="content/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="content/main.css" type="text/css" />
+    <link rel="stylesheet" href="content/animations.css" type="text/css" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- LANDING PAGE -->
+      <section id="landing">
+        <div class="container">
+          <!-- LOGO -->
+          <div class="logo-wrapper">
+            <div class="compass-logo">
+              <div class="compass-body"></div>
+              <div class="compass-face animate"></div>
+              <div class="compass-dial animate _reverse"></div>
+              <div class="compass-title"></div>
+            </div>
+          </div>
+
+          <!-- LOGIN / CREATE -->
+          <div class="login-create-wrapper">
+            <h1>Sign in to Your Account</h1>
+            <div class="login-comp">
+              <div class="form-wrapper">
+                <input type="text" placeholder="Email &#42;" />
+                <input type="text" placeholder="Password &#42;" />
+              </div>
+              <small>* required</small>
+              <button type="submit" value="Sign In" class="cta-btn main-signin">
+                Sign in
+              </button>
+            </div>
+            <div class="create-comp">
+              <button
+                type="submit"
+                value="Sign In"
+                class="cta-btn _white main-create"
+              >
+                Create account
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CREATE ACCOUNT -->
+      <section id="create-account" class="hidden">
+        <div class="container">
+          <!-- CREATE -->
+          <div class="login-create-wrapper">
+            <h1>Create Account</h1>
+            <div class="login-comp">
+              <div class="form-wrapper">
+                <input type="text" placeholder="Email &#42;" />
+                <input type="text" placeholder="Password &#42;" />
+                <input type="text" placeholder="Retype Password &#42;" />
+                <input type="text" placeholder="First Name &#42;" />
+                <input type="text" placeholder="Last Name &#42;" />
+                <input type="text" placeholder="ZIP/Postal Code &#42;" />
+              </div>
+              <small>* required</small>
+              <button
+                type="submit"
+                value="Create account"
+                class="cta-btn confirm-create"
+              >
+                Create account
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- DISCOVERY HOME -->
+      <section id="discovery-home" class="hidden">
+        <div class="row _hero">
+          <div class="container">
+            <div class="settings-toggle"></div>
+            <div class="hero _woods"><h1>Start New Discovery</h1></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
+            <h3>Select a category to begin discovery</h3>
+            <div class="block-grid">
+              <ul>
+                <li>
+                  <img src="images/tents.svg" border="0" alt="tents" />
+                  <p>Tents</p>
+                </li>
+                <li>
+                  <img src="images/clothes.svg" border="0" alt="tents" />
+                  <p>Jackets</p>
+                </li>
+                <li>
+                  <img src="images/shoes.svg" border="0" alt="tents" />
+                  <p>Footwear</p>
+                </li>
+                <li>
+                  <img src="images/bikes.svg" border="0" alt="tents" />
+                  <p>Bikes</p>
+                </li>
+                <li>
+                  <img src="images/climbing.svg" border="0" alt="tents" />
+                  <p>Climbing</p>
+                </li>
+
+                <li>
+                  <img src="images/water.svg" border="0" alt="tents" />
+                  <p>Kayaks</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ITEM DISCOVERY -->
+      <section id="item-discovery" class="hidden">
+        <div class="row _banner">
+          <div class="container">
+            <div class="back-toggle _light"></div>
+            <h3>Category Name</h3>
+          </div>
+        </div>
+        <div class="row" id="question-view">
+          <div class="container">
+            <h3>Answer questions to find your next piece of gear</h3>
+            <div class="progress-bar">
+              <div class="prog-start"></div>
+              <div class="prog-marker"><div class="marker"></div></div>
+              <div class="prog-end"></div>
+            </div>
+
+            <div id="question-wrapper">
+              <div class="card-wrapper">
+                <div class="card">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+                </div>
+                <div class="card hidden">
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua?
+                </div>
+                <div class="card hidden">Ut enim ad minim veniam?</div>
+                <div class="card hidden">
+                  quis nostrud exercitation ullamco?
+                </div>
+                <div class="card hidden">
+                  laboris nisi ut aliquip ex ea commodo consequat?
+                </div>
+              </div>
+              <div class="control-wrapper">
+                <div class="question-control cta-btn _yes">Yes</div>
+                <div class="question-control cta-btn _no">No</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row hidden" id="answer-view">
+          <div class="container">
+            <h3>Here's what we found!</h3>
+            <div id="answer-wrapper">
+              <div class="card-wrapper">
+                <div class="final-card">
+                  <h5>Patagonia Fitz Roy Bison Trucker Hat</h5>
+                  <img src="images/hat.jpg" alt="Item Name" />
+                </div>
+              </div>
+              <div class="control-wrapper">
+                <div class="cta-btn _buy">Buy Now</div>
+                <div class="cta-btn _white _restart">Start Over</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ACCOUNT SETTINGS -->
+      <section id="update-account" class="hidden">
+        <div class="container">
+          <div class="back-toggle"></div>
+          <!-- CREATE -->
+          <div class="login-create-wrapper">
+            <h1>Update Profile</h1>
+            <div class="login-comp">
+              <div class="form-wrapper">
+                <input type="text" placeholder="YourEmail@Example.com" />
+                <input type="text" placeholder="Enter Password &#42;" />
+                <input type="text" placeholder="Confirm Password &#42;" />
+                <input type="text" placeholder="First Name &#42;" />
+                <input type="text" placeholder="Last Name &#42;" />
+                <input type="text" placeholder="ZIP/Postal Code &#42;" />
+              </div>
+              <button
+                type="submit"
+                value="Update Profile"
+                class="cta-btn confirm-create"
+              >
+                Update Profile
+              </button>
+              <button
+                type="submit"
+                value="Sign Out"
+                class="cta-btn _white main-create"
+              >
+                Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
