@@ -4,128 +4,121 @@ $(function() {
   //SIGN IN
   $(".main-signin").click(function() {
     $("#landing")
-      .addClass("moveToTop")
-      .delay(1000)
+      .attr("class", "moveToTop")
+      .delay(650)
       .queue(function(next) {
-        $("#landing")
-          .addClass("hidden")
-          .removeClass("moveToTop");
+        $("#landing").attr("class", "hidden");
         next();
       });
 
-    $("#discovery-home")
-      .removeClass("hidden")
-      .addClass("moveFromBottom");
+    $("#discovery-home").attr("class", "moveFromBottom");
   });
 
   //CREATE
   $(".main-create").click(function() {
-    console.log("Click");
     $("#landing")
-      .addClass("moveToLeft")
-      .delay(1000)
+      .attr("class", "moveToLeft")
+      .delay(650)
       .queue(function(next) {
-        $("#landing")
-          .addClass("hidden")
-          .removeClass("moveToLeft");
+        $("#landing").attr("class", "hidden");
         next();
       });
-    $("#create-account")
-      .removeClass("hidden")
-      .addClass("moveFromRight");
+    $("#create-account").attr("class", "moveFromRight");
   });
 
   //ACCOUNT CREATE
   $(".confirm-create").click(function() {
     $("#create-account")
       .addClass("moveToTop")
-      .delay(1000)
+      .delay(650)
       .queue(function(next) {
-        $("#create-account")
-          .addClass("hidden")
-          .removeClass("moveToTop");
+        $("#create-account").attr("class", "hidden");
         next();
       });
 
-    $("#discovery-home")
-      .removeClass("hidden")
-      .addClass("moveFromBottom");
+    $("#discovery-home").attr("class", "moveFromBottom");
+  });
+
+  //CANCEL CREATE
+  $(".cancel-create").click(function() {
+    $("#create-account")
+      .attr("class", "moveToRight")
+      .delay(650)
+      .queue(function(next) {
+        $("#create-account").attr("class", "hidden");
+        next();
+      });
+
+    $("#landing").attr("class", "moveFromLeft");
   });
 
   //SETTINGS
   $(".settings-toggle").click(function() {
     $("#discovery-home")
-      .removeClass("moveFromLeft moveFromBottom")
-      .addClass("moveToLeft")
-      .delay(1000)
+      .attr("class", "moveToLeft")
+      .delay(650)
       .queue(function(next) {
-        $("#discovery-home")
-          .addClass("hidden")
-          .removeClass("moveToLeft");
+        $("#discovery-home").attr("class", "hidden");
         next();
       });
+    $("#update-account").attr("class", "moveFromRight");
+  });
+
+  //SIGN OUT
+  $(".main-signout").click(function() {
     $("#update-account")
-      .removeClass("hidden")
-      .addClass("moveFromRight");
+      .attr("class", "moveToBottom")
+      .delay(650)
+      .queue(function(next) {
+        $("#update-account").attr("class", "hidden");
+        next();
+      });
+    $("#landing").attr("class", "moveFromTop");
   });
 
   //BACK TO CATEGORIES
-  $(".back-toggle").click(function() {
+  $("._return").click(function() {
     $("#update-account")
-      .removeClass("moveFromRight")
-      .addClass("moveToRight")
-      .delay(1000)
+      .attr("class", "moveToRight")
+      .delay(650)
       .queue(function(next) {
-        $("#update-account")
-          .addClass("hidden")
-          .removeClass("moveToRight");
+        $("#update-account").attr("class", "hidden");
         next();
       });
-    $("#discovery-home")
-      .removeClass("hidden moveFromBottom")
-      .addClass("moveFromLeft");
+    $("#discovery-home").attr("class", "moveFromLeft");
   });
 
   //START DISCOVERY
   $(".block-grid ul li").click(function() {
     $("#discovery-home")
-      .removeClass("moveFromLeft moveFromBottom")
-      .addClass("moveToTop")
-      .delay(1000)
+      .attr("class", "moveToTop")
+      .delay(650)
       .queue(function(next) {
-        $("#discovery-home")
-          .addClass("hidden")
-          .removeClass("moveToTop");
+        $("#discovery-home").attr("class", "hidden");
         next();
       });
-    $("#item-discovery")
-      .removeClass("hidden")
-      .addClass("moveFromBottom");
+    $("#item-discovery").attr("class", "moveFromBottom");
   });
 
   //END DISCOVERY
-  $(".back-toggle, ._restart").click(function() {
+  $("._restart").click(function() {
     $("#item-discovery")
-      .removeClass("moveFromBottom")
-      .addClass("moveToRight")
-      .delay(1000)
+      .attr("class", "moveToRight")
+      .delay(650)
       .queue(function(next) {
-        $("#item-discovery")
-          .addClass("hidden")
-          .removeClass("moveToRight");
+        $("#item-discovery").attr("class", "hidden");
         next();
       });
-    $("#discovery-home")
-      .removeClass("hidden moveFromBottom")
-      .addClass("moveFromLeft");
+    $("#discovery-home").attr("class", "moveFromLeft");
   });
 
-  //CARD DISCOVERY CONTROLS
+  //BUILD PROGRESS BAR
   let questionCount = $(".card").length;
   let stepPercent = 100 / questionCount;
   $(".marker").css("width", stepPercent + "%");
   let progPercent = stepPercent;
 
+  //CARD DISCOVERY CONTROLS
   $(".card")
     .first()
     .addClass("_top");

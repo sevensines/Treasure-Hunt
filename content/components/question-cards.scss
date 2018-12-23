@@ -39,18 +39,18 @@
 #answer-wrapper {
   position: relative;
   @include full-auto;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   box-sizing: border-box;
 
   > .card-wrapper {
     position: relative;
     width: 100%;
-    height: 330px;
+    height: 350px;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     align-content: flex-start;
     box-sizing: border-box;
 
@@ -63,10 +63,7 @@
       padding: 20px;
       font-size: 2em;
       line-height: 1.1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
+      @include flex-column-center;
       border: 1px solid #ccc;
       border-radius: 0.3rem;
       box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.3);
@@ -90,10 +87,8 @@
   > .control-wrapper {
     @include full-auto;
     padding: 0;
-    display: flex;
+    @include flex-row-center;
     justify-content: space-around;
-    align-items: center;
-    align-content: center;
     box-sizing: border-box;
 
     > .cta-btn {
