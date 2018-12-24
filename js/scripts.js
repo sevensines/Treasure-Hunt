@@ -1,11 +1,13 @@
 $(function() {
-  console.log("Ready");
+  console.log("Ready!");
+
+  const delayAnimation = 600;
 
   //SIGN IN
   $(".main-signin").click(function() {
     $("#landing")
       .attr("class", "moveToTop")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#landing").attr("class", "hidden");
         next();
@@ -18,7 +20,7 @@ $(function() {
   $(".main-create").click(function() {
     $("#landing")
       .attr("class", "moveToLeft")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#landing").attr("class", "hidden");
         next();
@@ -30,7 +32,7 @@ $(function() {
   $(".confirm-create").click(function() {
     $("#create-account")
       .addClass("moveToTop")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#create-account").attr("class", "hidden");
         next();
@@ -43,7 +45,7 @@ $(function() {
   $(".cancel-create").click(function() {
     $("#create-account")
       .attr("class", "moveToRight")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#create-account").attr("class", "hidden");
         next();
@@ -56,7 +58,7 @@ $(function() {
   $(".settings-toggle").click(function() {
     $("#discovery-home")
       .attr("class", "moveToLeft")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#discovery-home").attr("class", "hidden");
         next();
@@ -68,7 +70,7 @@ $(function() {
   $(".main-signout").click(function() {
     $("#update-account")
       .attr("class", "moveToBottom")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#update-account").attr("class", "hidden");
         next();
@@ -80,7 +82,7 @@ $(function() {
   $("._return").click(function() {
     $("#update-account")
       .attr("class", "moveToRight")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#update-account").attr("class", "hidden");
         next();
@@ -92,7 +94,7 @@ $(function() {
   $(".block-grid ul li").click(function() {
     $("#discovery-home")
       .attr("class", "moveToTop")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $("#discovery-home").attr("class", "hidden");
         next();
@@ -102,14 +104,13 @@ $(function() {
       .text();
     $("#item-discovery").attr("class", "moveFromBottom");
     $(".category-name").html(catName);
-    console.log(questionPosition);
   });
 
   //END DISCOVERY
   $("._restart").click(function() {
     $("#item-discovery")
       .attr("class", "moveToRight")
-      .delay(650)
+      .delay(delayAnimation)
       .queue(function(next) {
         $(".card")
           .attr("class", "card hidden")
